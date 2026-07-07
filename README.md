@@ -17,6 +17,21 @@ Currently ships one plugin:
 The first command registers this repository as a marketplace; the second installs the
 `iris-port` plugin from it.
 
+Third-party marketplaces don't auto-update by default. To keep `iris-port` current, enable
+auto-update — either toggle it in `/plugin` → **Marketplaces** → `iris-lean` → **Enable
+auto-update**, or add the `autoUpdate` flag to `~/.claude/settings.json`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "iris-lean": {
+      "source": { "source": "github", "repo": "markusdemedeiros/iris-port" },
+      "autoUpdate": true
+    }
+  }
+}
+```
+
 ## Repository layout
 
 ```
