@@ -3,7 +3,13 @@ name: port-iris
 description: Ports Rocq Iris code to Lean. Use when the user asks to port a piece of Iris code to Lean, or when writing Lean code derived from Iris source code.
 ---
 
-Port the given code from Rocq to Lean. Ensure that you are following all of the porting rules outlined in `${CLAUDE_PLUGIN_ROOT}/notes/RULES.md`, the workflow in `${CLAUDE_PLUGIN_ROOT}/notes/WORKFLOW.md`, and the style rules in `${CLAUDE_PLUGIN_ROOT}/notes/STYLE_EXTENSIONS.md`. When you hit iprop or proof-mode elaboration errors, consult the checklist in `${CLAUDE_PLUGIN_ROOT}/notes/IPROP_QUIRKS.md`.
+Port the given code from Rocq to Lean, following the porting rules, workflow, and style conventions in these files:
+
+@${CLAUDE_PLUGIN_ROOT}/notes/RULES.md
+@${CLAUDE_PLUGIN_ROOT}/notes/WORKFLOW.md
+@${CLAUDE_PLUGIN_ROOT}/notes/STYLE_EXTENSIONS.md
+
+When you hit iprop or proof-mode elaboration errors, consult the checklist in `${CLAUDE_PLUGIN_ROOT}/notes/IPROP_QUIRKS.md`.
 
 When porting Rocq code, you should be using the following subagents:
 - iris-rocq-expert: Query the Iris source code and the proof state at any given point.
