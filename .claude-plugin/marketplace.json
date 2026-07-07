@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "iris-lean",
+  "description": "Tooling for the Iris-Lean porting effort: skills and agents for faithfully porting Rocq (Coq) Iris to Lean 4.",
+  "owner": {
+    "name": "Iris-Lean porting effort"
+  },
+  "plugins": [
+    {
+      "name": "iris-port",
+      "description": "A protocol for faithfully porting Rocq (Coq) Iris framework code to Lean 4. Bundles the /port-iris orchestration skill, three specialist subagents (iris-rocq-expert, lean4-fixer, lean-style-critic), the porting rules/workflow/style knowledge base, and the /learn-diff style-training loop.",
+      "source": "./plugins/iris-port",
+      "category": "development",
+      "homepage": "https://github.com/markusdemedeiros/iris-port/tree/main/plugins/iris-port"
+    }
+  ]
+}

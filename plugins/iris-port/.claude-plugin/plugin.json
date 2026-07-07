@@ -1,0 +1,9 @@
+{
+  "name": "iris-port",
+  "description": "A protocol for faithfully porting Rocq (Coq) Iris framework code to Lean 4. Bundles the /port-iris orchestration skill, three specialist subagents (iris-rocq-expert, lean4-fixer, lean-style-critic), the porting rules/workflow/style knowledge base, and the /learn-diff style-training loop.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Iris-Lean porting effort"
+  },
+  "keywords": ["iris", "rocq", "coq", "lean", "lean4", "porting", "formal-verification", "mathlib"]
+}
