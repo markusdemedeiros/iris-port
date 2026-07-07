@@ -1,14 +1,16 @@
 # Porting Workflow
 
 ## Porting order
-1. Read the Rocq source yourself. For short files (<300 lines), this is faster than the Rocq expert.
-2. Grep/Glob for required Lean building blocks. Use direct tool calls, not the Explore agent.
-3. Identify gaps: missing infrastructure, instance resolution issues, needed helpers. Solve these yourself.
-4. Write the complete file. Sorry out only genuinely hard proofs.
-5. Send the file to lean4-fixer to verify compilation and fix sorry'd leaves.
-6. Apply all style rules yourself (aliases, naming, term-mode). Then send to lean-style-critic to apply fixes directly for what you missed.
-7. Send to lean4-fixer again to verify the critic's edits still compile.
-8. Verify 1:1 correspondence against the Rocq source.
+1. Read `tactics.md` (and `proofmode.md`) at the root of the iris-lean checkout to refresh your knowledge of the current iris-lean proof-mode tactics — their names, syntax, and semantics drift over time.
+2. Read the Rocq source yourself. For short files (<300 lines), this is faster than the Rocq expert.
+3. Grep/Glob for required Lean building blocks. Use direct tool calls, not the Explore agent.
+4. Identify gaps: missing infrastructure, instance resolution issues, needed helpers. Solve these yourself.
+5. Write the complete file. Sorry out only genuinely hard proofs.
+6. Send the file to lean4-fixer to verify compilation and fix sorry'd leaves.
+7. Apply all style rules yourself (aliases, naming, term-mode). Then send to lean-style-critic to apply fixes directly for what you missed.
+8. Send to lean4-fixer again to verify the critic's edits still compile.
+9. Verify 1:1 correspondence against the Rocq source.
+10. If the port surfaced any improvements to the `/port-iris` plugin itself (new rules, notes, agent or workflow tweaks), ask the user whether they want to prepare a PR contributing those changes to the upstream repo at https://github.com/markusdemedeiros/iris-port.
 
 ## Scope
 - Port everything unless told otherwise.

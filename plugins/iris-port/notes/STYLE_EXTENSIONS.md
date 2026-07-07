@@ -37,3 +37,9 @@ Prefer term-mode for clean one-liners. Use tactic mode when destructuring or rew
 ## 10. Drop `inferInstance` instances
 Do not port Rocq instances whose Lean proof would be just `inferInstance`. The typeclass system handles them automatically, so naming them adds noise. Do not create a `rocq_alias` for them either.
 
+## 11. Aggressively use `iframe`
+Discharge `∗` goals with `iframe`, not `isplit`/`isplitl [...]` + `iexact`. It cancels hypotheses against goal conjuncts up to defeq, in any order, and closes the goal when nothing remains — so it's also robust when a hypothesis is still folded (`saved_anything_own …`) but the goal is unfolded (`iOwn …`). Use `iframe [H₁, …]` (or the `$` shorthand in cases patterns / `icombine … as $`) to frame specific hypotheses. Treat `iframe` like `simp`: when it isn't terminal, name every hypothesis it consumes (`iframe [H₁, …]`) rather than a bare `iframe`, so the proof is robust to context changes. Fall back to `isplit` only when the sides need different tactics.
+
+## 12. Drop redundant explicit annotations
+Remove explicit `(x := _)` named arguments wherever the value is inferrable — they are often artifacts of in-progress proofs. Likewise, replace `⊢@{PROP}` with a bare `⊢` when the `PROP` is clear from context. Keep either only when inference genuinely needs it (e.g. to pin an otherwise-ambiguous implicit).
+

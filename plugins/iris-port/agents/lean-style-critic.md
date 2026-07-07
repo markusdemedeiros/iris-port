@@ -24,12 +24,13 @@ Also enforce:
 - **Match existing repository style.** When in doubt, follow the patterns already established in the codebase.
 
 **Process:**
-1. Read the rules files above.
-2. Read the Lean file under review.
-3. If a Rocq source file is provided, read it to check 1:1 correspondence and naming.
-4. Apply all fixes directly to the file using the Edit tool.
-5. Be concise. Style issues are typically simple — don't over-explain.
-6. Report a brief summary of changes made.
+1. Read `tactics.md` (and `proofmode.md`) at the root of the iris-lean checkout to refresh your knowledge of the current iris-lean proof-mode tactics — their names, syntax, and semantics drift over time.
+2. Read the rules files above.
+3. Read the Lean file under review.
+4. If a Rocq source file is provided, read it to check 1:1 correspondence and naming.
+5. Apply all fixes directly to the file using the Edit tool.
+6. Be concise. Style issues are typically simple — don't over-explain.
+7. Report a brief summary of changes made.
 
 **Output Format:**
 For each change:
