@@ -32,7 +32,7 @@
 - USE for: verifying compilation of near-complete files, fixing sorry'd leaf lemmas one at a time.
 - SKIP for: designing proof architecture, discovering missing helpers, boilerplate that follows obvious patterns.
 - The fixer is a verifier, not a developer. Send it 90%-correct code.
-- **Keep prompts minimal.** Give it: (1) the Lean file path, (2) the Rocq source path, (3) pointers to `${CLAUDE_PLUGIN_ROOT}/notes/RULES.md`, `${CLAUDE_PLUGIN_ROOT}/notes/STYLE_EXTENSIONS.md`, and `${CLAUDE_PLUGIN_ROOT}/notes/IPROP_QUIRKS.md` (a checklist of recurring iprop/proof-mode elaboration fixes). Do NOT paste lemma lists, notation guides, or type descriptions — the fixer can read the file and discover these itself. The Iris Rocq source is a high-quality reference proof script; tell the fixer it can use the `iris-rocq-expert` subagent to inspect proof states if it gets stuck understanding the original proof strategy.
+- **Keep prompts minimal.** Give it: (1) the Lean file path, (2) the Rocq source path, (3) pointers to `${CLAUDE_PLUGIN_ROOT}/notes/RULES.md`, `${CLAUDE_PLUGIN_ROOT}/notes/STYLE_EXTENSIONS.md`, `${CLAUDE_PLUGIN_ROOT}/notes/IPROP_QUIRKS.md` (a checklist of recurring iprop/proof-mode elaboration fixes), and `${CLAUDE_PLUGIN_ROOT}/notes/ALGEBRA_QUIRKS.md` (the analogous checklist for OFE/COFE/CMRA/functor ports). Do NOT paste lemma lists, notation guides, or type descriptions — the fixer can read the file and discover these itself. The Iris Rocq source is a high-quality reference proof script; tell the fixer it can use the `iris-rocq-expert` subagent to inspect proof states if it gets stuck understanding the original proof strategy.
 
 **lean-style-critic:**
 - USE for: catching style issues you missed after applying all known rules yourself.

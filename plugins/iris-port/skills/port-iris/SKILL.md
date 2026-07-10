@@ -9,7 +9,7 @@ Port the given code from Rocq to Lean, following the porting rules, workflow, an
 @${CLAUDE_PLUGIN_ROOT}/notes/WORKFLOW.md
 @${CLAUDE_PLUGIN_ROOT}/notes/STYLE_EXTENSIONS.md
 
-When you hit iprop or proof-mode elaboration errors, consult the checklist in `${CLAUDE_PLUGIN_ROOT}/notes/IPROP_QUIRKS.md`.
+When you hit iprop or proof-mode elaboration errors, consult the checklist in `${CLAUDE_PLUGIN_ROOT}/notes/IPROP_QUIRKS.md`. For non-proof-mode algebra ports (OFE/COFE/CMRA/functors), consult `${CLAUDE_PLUGIN_ROOT}/notes/ALGEBRA_QUIRKS.md`.
 
 When porting Rocq code, you should be using the following subagents:
 - iris-rocq-expert: Query the Iris source code and the proof state at any given point.

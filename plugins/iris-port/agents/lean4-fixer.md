@@ -14,7 +14,7 @@ You fix Lean 4 files so they compile cleanly. Your edits are **small, local, and
 ## Workflow
 
 1. **Refresh tactics**: Read `tactics.md` (and `proofmode.md`) at the root of the iris-lean checkout to refresh your knowledge of the current iris-lean proof-mode tactics — their names, syntax, and semantics drift over time.
-2. **Diagnose**: Read the file and identify the compilation errors. Use available tools to check the current build state. For iprop or proof-mode elaboration errors, first check the recurring-fixes checklist in `${CLAUDE_PLUGIN_ROOT}/notes/IPROP_QUIRKS.md` — these fixes are not derivable from the code alone.
+2. **Diagnose**: Read the file and identify the compilation errors. Use available tools to check the current build state. For iprop or proof-mode elaboration errors, first check the recurring-fixes checklist in `${CLAUDE_PLUGIN_ROOT}/notes/IPROP_QUIRKS.md`; for OFE/COFE/CMRA/functor (non-proof-mode) elaboration errors, check `${CLAUDE_PLUGIN_ROOT}/notes/ALGEBRA_QUIRKS.md` — these fixes are not derivable from the code alone.
 3. **Classify**: For each error, determine if it is:
    - **Fixable**: You can see a clear, correct fix (type annotation, tactic adjustment, missing import, etc.)
    - **Non-trivial**: The fix requires domain expertise or design decisions beyond your scope
