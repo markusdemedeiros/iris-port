@@ -10,7 +10,7 @@ knowledge base, and a `/learn-diff` style-training loop.
 skills/port-iris      /port-iris — orchestrator (entry point)
 skills/learn-diff     /learn-diff — trains the style critic from a reviewed diff
 agents/               iris-rocq-expert · lean4-fixer · lean-style-critic
-notes/                RULES · WORKFLOW · STYLE_EXTENSIONS · HOUSE_STYLE · IPROP_QUIRKS
+notes/                RULES · WORKFLOW · STYLE_EXTENSIONS · HOUSE_STYLE · IPROP_QUIRKS · ALGEBRA_QUIRKS
 templates/            optional CLAUDE.md wiring snippet
 .mcp.json             lean-lsp (rocq-mcp is opt-in — see Setup)
 ```
